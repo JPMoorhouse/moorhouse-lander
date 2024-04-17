@@ -1,0 +1,52 @@
+---
+import Banner from "./Banner.astro";
+interface card {
+  Cardicon: string;
+  cardText: string;
+  cardDescription: string;
+}
+
+interface WhatWeOfferProps {
+  pretitle: string;
+  heading: string;
+  bannerTitle: string;
+  whatweoffer: card[];
+}
+// @ts-ignore
+const { pretitle, heading, whatweoffer, bannerTitle }: WhatWeOfferProps =
+  Astro.props; // Access data prop directly
+---
+
+<div
+  class="lg:py-[85px] font-body py-12 rounded-[30px] lg:my-16 my-8 lg:mx-12 mx-6 what-we-offer-gradient relative"
+>
+  <div class="what-we-offer-bg"></div>
+  <div class="relative z-50 custom-container">
+    <p class="text-secondary text-center text-lg mb-5">{pretitle}</p>
+    <h2
+      class="lg:text-6xl md:text-5xl text-4xl xl:w-[60%] lg:leading-[70px] mx-auto font-medium text-center lg:mb-28 mb-16 text-white"
+    >
+      {heading}
+    </h2>
+    <div class="">
+      <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
+        {
+          whatweoffer.map((item: card) => (
+            <div>
+              <img
+                src={item.Cardicon}
+                alt={"Image Description"}
+                class="w-16 bg-primary rounded-xl p-4 h-16"
+              />
+              <h6 class="my-6 font-medium text-white">{item.cardText}</h6>
+              <p class="text-white opacity-90">{item.cardDescription}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class="lg:mt-24 mt-16">
+      <Banner bgColor="bg-black bg-opacity-25" title={bannerTitle} />
+    </div>
+  </div>
+</div>

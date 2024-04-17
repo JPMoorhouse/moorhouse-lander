@@ -1,0 +1,152 @@
+title: Landing-page
+seoData: {}
+blocks:
+  - discriminant: Hero
+    value:
+      title: Commercial & Industrial <span class="text-secondary">Painting</span>
+      subtitle: Professional Painting Contractor with Roots in Park City, Utah.
+      bannerTitle: Call us to get a FREE Estimate!
+      reviewDescription: Premier Services Tailored to Meet Your Needs!
+      firstButton:
+        label: 1 (435) 655-9076
+        url: tel:1 (435) 655-9076
+      secondButton:
+        label: Our Services
+        url: '#'
+  - discriminant: aboutmoorhouse
+    value:
+      pretitle: Providing Professional and Technical Paint & Stain Solutions
+      heading: For More Than 20 Years!
+      title: About Moorhouse Coating
+      subtitle: >-
+        Moorhouse Coating is a professional painting contractor Serving the
+        Southwest with roots in Park City, Summit County Utah.
+      description: >-
+        For over 20 years we have provided both professional and technical paint
+        and stain solutions for residential and commercial properties in Summit
+        County, as well as, all surrounding mountain communities. Our goal is to
+        remove the headache from your painting and staining project.
+      image: /images/landing-page/blocks/1/value/image.webp
+      Button:
+        label: Button Title
+        url: '#'
+  - discriminant: WhatWeOffer
+    value:
+      pretitle: What We Offer
+      heading: We Tailor Our Services To Suit Your Needs.
+      whatweoffer:
+        - Cardicon: /images/landing-page/blocks/2/value/WhatWeOffer/0/Cardicon.svg
+          cardText: Residential Home Painting Services
+          cardDescription: >-
+            Our team of house painters have experience painting and staining all
+            exterior surfaces.
+        - Cardicon: /images/landing-page/blocks/2/value/WhatWeOffer/1/Cardicon.svg
+          cardText: Exterior Painting Services
+          cardDescription: >-
+            Our team of house painters have experience painting and staining all
+            exterior surfaces.
+        - Cardicon: /images/landing-page/blocks/2/value/WhatWeOffer/2/Cardicon.svg
+          cardText: Exterior Staining Services
+          cardDescription: >-
+            Our team of house painters have experience painting and staining all
+            exterior surfaces.
+        - Cardicon: /images/landing-page/blocks/2/value/WhatWeOffer/3/Cardicon.svg
+          cardText: Commercial Painting Services
+          cardDescription: >-
+            Our team of house painters have experience painting and staining all
+            exterior surfaces.
+      bannerTitle: Have a Special Request? We`re Up For It!
+  - discriminant: WhatToExpect
+    value:
+      pretitle: Professional Commercial & Residential Painting
+      heading: What To Expect When You Hire Moorhouse Coating
+      WhatToExpect:
+        - Cardicon: /images/landing-page/blocks/3/value/WhatToExpect/0/Cardicon.svg
+          cardText: Effective Communication Throughout The Process
+          cardDescription: >-
+            The Key to a successful project is found in good communication. As a
+            licensed painting contractor, we have years of experience performing
+            quality for commercial and residential clients.
+        - Cardicon: /images/landing-page/blocks/3/value/WhatToExpect/1/Cardicon.svg
+          cardText: We Value Integrity & Honesty
+          cardDescription: >-
+            To Paint with integrity we must be open and forthright, even when
+            its difficult. Open, truthful conversations create opportunities for
+            better analysis and future decisions.
+        - Cardicon: /images/landing-page/blocks/3/value/WhatToExpect/2/Cardicon.svg
+          cardText: Over 20+ Years Experience
+          cardDescription: >-
+            Our 20+ years experience in the painting, has shown us nearly every
+            possible situation. Moorhouse handles your paint job in the most
+            efficient, professional way possible.
+        - Cardicon: /images/landing-page/blocks/3/value/WhatToExpect/3/Cardicon.svg
+          cardText: Effective Communication Throughout The Process
+          cardDescription: >-
+            The Key to a successful project is found in good communication. As a
+            licensed painting contractor, we have years of experience performing
+            quality for commercial and residential clients.
+        - Cardicon: /images/landing-page/blocks/3/value/WhatToExpect/4/Cardicon.svg
+          cardText: We Value Integrity & Honesty
+          cardDescription: >-
+            To Paint with integrity we must be open and forthright, even when
+            its difficult. Open, truthful conversations create opportunities for
+            better analysis and future decisions.
+        - Cardicon: /images/landing-page/blocks/3/value/WhatToExpect/5/Cardicon.svg
+          cardText: Over 20+ Years Experience
+          cardDescription: >-
+            Our 20+ years experience in the painting, has shown us nearly every
+            possible situation. Moorhouse handles your paint job in the most
+            efficient, professional way possible.
+  - discriminant: moorHouseCaoating
+    value:
+      pretitle: Moorhouse Coating
+      heading: Locally Owned Business
+      title: Hiring a local painter will save you time and money.
+      description: >-
+        For over 20 years we have provided both professional and technical paint
+        and stain solutions for residential and commercial properties in Summit
+        County, as well as, all surrounding mountain communities. Our goal is to
+        remove the headache from your painting and staining project.
+      image: /images/landing-page/blocks/4/value/image.webp
+      bannerTitle: Looking for a painter? Start local.
+  - discriminant: Testimonials
+    value:
+      pretitle: Customer Testimonials
+      heading: What People Say About Us
+      Testimonials:
+        - rating: 5
+          cardText: >-
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip
+          author: /images/landing-page/blocks/5/value/Testimonials/0/author.png
+          authorName: Chris Michael
+          authorpost: Park City
+        - rating: 5
+          cardText: >-
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip.
+          author: /images/landing-page/blocks/5/value/Testimonials/1/author.png
+          authorName: Chris Michael
+          authorpost: Park City
+        - rating: 3
+          cardText: >-
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip.
+          author: /images/landing-page/blocks/5/value/Testimonials/2/author.png
+          authorName: Chris Michael
+          authorpost: Park City
+        - rating: 5
+          cardText: >-
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip.
+          author: /images/landing-page/blocks/5/value/Testimonials/3/author.png
+          authorName: Chris Michael
+          authorpost: Park City

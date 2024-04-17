@@ -1,0 +1,57 @@
+---
+import Banner from "../components/Banner.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Testimonial from "../components/Testimonial";
+import TwoCol from "../components/TwoCol.astro";
+import WhatToExpect from "../components/WhatToExpect";
+import { createReader } from "@keystatic/core/reader";
+import keystaticConfig from "../../keystatic.config";
+import Layout from "../layouts/Layout.astro";
+import { getBlockValueByDiscriminant } from "../utils/getBlockValue";
+import WhatWeOffer from "../components/WhatWeOffer.astro";
+const reader = createReader(process.cwd(), keystaticConfig);
+const homePage = await reader.collections.Pages.read("landing-page");
+const heroData = getBlockValueByDiscriminant(homePage?.blocks, "Hero");
+const aboutdata = getBlockValueByDiscriminant(
+  homePage?.blocks,
+  "aboutmoorhouse"
+);
+const whatweoffer = getBlockValueByDiscriminant(
+  homePage?.blocks,
+  "WhatWeOffer"
+);
+const whattoexpect = getBlockValueByDiscriminant(
+  homePage?.blocks,
+  "WhatToExpect"
+);
+const moorHouseCaoating = getBlockValueByDiscriminant(
+  homePage?.blocks,
+  "moorHouseCaoating"
+);
+const testimonials = getBlockValueByDiscriminant(
+  homePage?.blocks,
+  "Testimonials"
+);
+console.log(homePage);
+---
+
+<Layout>
+  <div class="bg-hero-gradient relative">
+    <div class="hero-bg"></div>
+    <Header />
+    <Hero {...heroData} />
+  </div>
+  <div class="lg:pt-10">
+    <TwoCol {...aboutdata} index={0} />
+  </div>
+  <WhatWeOffer {...whatweoffer} />
+  <WhatToExpect client:only {...whattoexpect}/>
+  <div class="bg-[#DFDFDF33] rounded-[90px] lg:pb-20 pb-16 my-20">
+    <TwoCol {...moorHouseCaoating} index={0} />
+    <div class="custom-container">
+      <Banner bgColor="bg-helper lg:mx-12" title={moorHouseCaoating.bannerTitle}/>
+    </div>
+  </div>
+  <Testimonial client:only {...testimonials} />
+</Layout>
