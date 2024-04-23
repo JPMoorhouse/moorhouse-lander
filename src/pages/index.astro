@@ -33,10 +33,14 @@ const testimonials = getBlockValueByDiscriminant(
   homePage?.blocks,
   "Testimonials"
 );
-console.log(homePage);
+const seodata = homePage?.seoData;
 ---
 
-<Layout>
+<Layout
+  title={seodata?.seoTitle}
+  description={seodata?.seoDesription}
+  image={seodata?.ogImage}
+>
   <div class="bg-hero-gradient relative">
     <div class="hero-bg"></div>
     <Header />
@@ -46,11 +50,14 @@ console.log(homePage);
     <TwoCol {...aboutdata} index={0} />
   </div>
   <WhatWeOffer {...whatweoffer} />
-  <WhatToExpect client:only {...whattoexpect}/>
+  <WhatToExpect client:only {...whattoexpect} />
   <div class="bg-[#DFDFDF33] rounded-[90px] lg:pb-20 pb-16 my-20">
     <TwoCol {...moorHouseCaoating} index={0} />
     <div class="custom-container">
-      <Banner bgColor="bg-helper lg:mx-12" title={moorHouseCaoating.bannerTitle}/>
+      <Banner
+        bgColor="bg-helper lg:mx-12"
+        title={moorHouseCaoating.bannerTitle}
+      />
     </div>
   </div>
   <Testimonial client:only {...testimonials} />

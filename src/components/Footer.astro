@@ -4,7 +4,6 @@ import keystaticConfig from "../../keystatic.config";
 const reader = createReader(process.cwd(), keystaticConfig);
 import { createReader } from "@keystatic/core/reader";
 const footer: any = await reader.singletons.footer.read();
-console.log(footer);
 ---
 
 <div
@@ -40,7 +39,7 @@ console.log(footer);
         >
           <span class="font-bold text-xl">Sitemap</span>
           {
-           footer.Sitemap.map((link:any) => (
+            footer.Sitemap.map((link: any) => (
               <a href={link.link} class="font-light">
                 {link.label}
               </a>
@@ -52,7 +51,7 @@ console.log(footer);
         >
           <span class="font-bold text-xl">Our Services</span>
           {
-            footer.OurServices.map((link:any) => (
+            footer.OurServices.map((link: any) => (
               <a href={link.link} class="font-light">
                 {link.label}
               </a>
@@ -127,7 +126,7 @@ console.log(footer);
 
         <div class="flex mt-3 -mx-2 sm:mt-0">
           {
-            footer.otherlinks.map((link:any) => (
+            footer.otherlinks.map((link: any) => (
               <a
                 href={link.link}
                 class="mx-2 text-sm text-white transition-colors duration-300 hover:text-white dark:hover:text-gray-300"

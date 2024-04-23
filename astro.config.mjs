@@ -9,8 +9,8 @@ import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: "https://moorhouse-2024.netlify.app",
   integrations: [mdx(), sitemap(), tailwind(), react(), markdoc(), keystatic()],
-  output: 'server',
-  adapter: netlify()
+  output: "hybrid",
+  adapter: netlify(),
 });

@@ -11,7 +11,10 @@ import {
 
 export default config({
   storage: {
-    kind: "local",
+    kind: "cloud",
+  },
+  cloud: {
+    project: "moorhouse/moorhouse-lander",
   },
   collections: {
     Pages: collection({
@@ -120,8 +123,8 @@ export default config({
       label: "footer",
       path: "src/content/footer/",
       schema: {
-        pretitle:fields.text({label:"pretitle"}),
-        heading:fields.text({label:"heading"}),
+        pretitle: fields.text({ label: "pretitle" }),
+        heading: fields.text({ label: "heading" }),
 
         logo: fields.image({
           label: "Company Logo",
@@ -169,7 +172,6 @@ export default config({
           Button: fields.object({
             label: fields.text({ label: "Button" }),
             url: fields.text({ label: "Button Slug" }),
-            
           }),
         }),
         otherlinks: fields.array(
