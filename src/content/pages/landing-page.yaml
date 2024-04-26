@@ -39,19 +39,23 @@ blocks:
       heading: We Tailor Our Services To Suit Your Needs.
       bgImage: /images/landing-page/blocks/2/value/bgImage.png
       whatweoffer:
-        - cardText: Residential Home Painting Services
+        - Cardicon: /images/landing-page/blocks/2/value/whatweoffer/0/Cardicon.svg
+          cardText: Residential Home Painting Services
           cardDescription: >-
             Our team of house painters have experience painting and staining all
             exterior surfaces.
-        - cardText: Exterior Painting Services
+        - Cardicon: /images/landing-page/blocks/2/value/whatweoffer/1/Cardicon.svg
+          cardText: Exterior Painting Services
           cardDescription: >-
             Our team of house painters have experience painting and staining all
             exterior surfaces.
-        - cardText: Exterior Staining Services
+        - Cardicon: /images/landing-page/blocks/2/value/whatweoffer/2/Cardicon.svg
+          cardText: Exterior Staining Services
           cardDescription: >-
             Our team of house painters have experience painting and staining all
             exterior surfaces.
-        - cardText: Commercial Painting Services
+        - Cardicon: /images/landing-page/blocks/2/value/whatweoffer/3/Cardicon.svg
+          cardText: Commercial Painting Services
           cardDescription: >-
             Our team of house painters have experience painting and staining all
             exterior surfaces.
