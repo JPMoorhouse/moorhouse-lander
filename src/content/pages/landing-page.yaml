@@ -1,5 +1,7 @@
 title: Landing-page
-seoData: {}
+seoData:
+  seoTitle: 'Moor House '
+  seoDesription: Commercial & Industrial Painting
 blocks:
   - discriminant: Hero
     value:
