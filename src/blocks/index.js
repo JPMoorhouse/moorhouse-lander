@@ -4,6 +4,11 @@ export const HomeHero = {
   schema: fields.object({
     title: fields.text({ label: "Title" }),
     subtitle: fields.text({ label: "Subtitle" }),
+    bgImage: fields.image({
+      label: "Hero background image",
+      directory: "/public/images/",
+      publicPath: "/images/",
+    }),
     bannerTitle: fields.text({ label: "Banner Title" }),
     reviewDescription: fields.text({ label: "Review Description" }),
     firstButton: fields.object({
@@ -40,6 +45,11 @@ export const WhatWeOffer = {
   schema: fields.object({
     pretitle: fields.text({ label: "Pretitle" }),
     heading: fields.text({ label: "Heading" }),
+    bgImage: fields.image({
+      label: "background image",
+      directory: "/public/images/",
+      publicPath: "/images/",
+    }),
     whatweoffer: fields.array(
       fields.object({
         Cardicon: fields.image({
@@ -55,7 +65,7 @@ export const WhatWeOffer = {
         itemLabel: (props) => props.fields.cardText.value,
       }
     ),
-    bannerTitle: fields.text({ label: "Banner Title" })
+    bannerTitle: fields.text({ label: "Banner Title" }),
   }),
 };
 export const WhatToExpect = {

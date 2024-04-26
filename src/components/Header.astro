@@ -1,45 +1,123 @@
+---
+import keystaticConfig from "../../keystatic.config";
+import { Image } from "astro:assets";
+const reader = createReader(process.cwd(), keystaticConfig);
+import { createReader } from "@keystatic/core/reader";
+const header: any = await reader.singletons.header.read();
+const topbar: any = await reader.singletons.topbar.read();
+---
+
 <div class="bg-secondary relative z-50">
   <div
-    class="text-white xl:hidden custom-container lg:px-14 px-0  flex justify-between items-center gap-4 py-2"
+    class="text-white xl:hidden custom-container lg:px-14 px-0 flex justify-between items-center gap-4 py-2"
   >
-    <p class="flex justify-center items-center text-sm gap-2 mr-4">
-      <img src="/assets/icons/message.svg" alt="" /> <span>info@moorhousecoating.com</span>
-    </p>
+    <a
+      href={`mailto:${topbar.message.email}`}
+      class="flex justify-center items-center text-sm gap-2 mr-4"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="13"
+        height="13"
+        class="mr-2"
+        viewBox="0 0 13 13"
+        fill="none"
+      >
+        <g clip-path="url(#clip0_1_47)">
+          <path
+            d="M12.9751 3.00195L8.41533 7.5617C7.90691 8.06884 7.21811 8.35364 6.5 8.35364C5.78189 8.35364 5.09309 8.06884 4.58467 7.5617L0.0249167 3.00195C0.0173333 3.08754 0 3.16499 0 3.25004V9.75004C0.00086009 10.4681 0.286478 11.1564 0.794202 11.6642C1.30193 12.1719 1.9903 12.4575 2.70833 12.4584H10.2917C11.0097 12.4575 11.6981 12.1719 12.2058 11.6642C12.7135 11.1564 12.9991 10.4681 13 9.75004V3.25004C13 3.16499 12.9827 3.08754 12.9751 3.00195Z"
+            fill="white"></path>
+          <path
+            d="M7.64943 6.79559L12.597 1.84746C12.3573 1.45005 12.0193 1.12111 11.6155 0.892358C11.2117 0.663608 10.7558 0.542772 10.2917 0.541504H2.70835C2.24426 0.542772 1.78833 0.663608 1.38453 0.892358C0.980731 1.12111 0.642691 1.45005 0.403015 1.84746L5.3506 6.79559C5.65587 7.09963 6.06916 7.27034 6.50001 7.27034C6.93086 7.27034 7.34416 7.09963 7.64943 6.79559Z"
+            fill="white"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_1_47">
+            <rect width="13" height="13" fill="white"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+      <span>{topbar.message.email}</span>
+    </a>
     <div class="flex justify-center items-center gap-3">
-      <img src="/assets/icons/instagram.svg" alt="" />
-      <img src="/assets/icons/facebook.svg" alt="" />
-      <img src="/assets/icons/youtube.svg" alt="" />
+      {
+        topbar.social.map((item: any) => (
+          <a href={item.link} aria-label={item.icontext}>
+            <Image
+              src={item.image}
+              class="w-4 h-4"
+              alt=""
+              height={16}
+              width={16}
+            />
+          </a>
+        ))
+      }
     </div>
   </div>
 </div>
 <div class="custom-container">
   <div class="relative lg:px-14 z-50 flex justify-between items-center gap-14">
     <div class="w-fit relative z-50">
-      <img src="/assets/images/logo.png" class="w-36" alt="" />
+      <Image src={header.logo} class="w-36" alt="" width="144" height="135" />
     </div>
     <div class="lg:w-full">
       <div
         class="text-white xl:flex w-full hidden justify-end items-center gap-4 border-b pb-4 border-[#D9D9D980]"
       >
-        <p class="flex justify-center items-center text-sm gap-2 mr-8">
-          <img src="/assets/icons/message.svg" alt="" />info@moorhousecoating.com
-        </p>
-        <img src="/assets/icons/instagram.svg" alt="" />
-        <img src="/assets/icons/facebook.svg" alt="" />
-        <img src="/assets/icons/youtube.svg" alt="" />
+        <a
+          href={`mailto:${topbar.message.email}`}
+          class="flex justify-center items-center text-sm gap-2 mr-8"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="13"
+            height="13"
+            class="mr-2"
+            viewBox="0 0 13 13"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_1_47)">
+              <path
+                d="M12.9751 3.00195L8.41533 7.5617C7.90691 8.06884 7.21811 8.35364 6.5 8.35364C5.78189 8.35364 5.09309 8.06884 4.58467 7.5617L0.0249167 3.00195C0.0173333 3.08754 0 3.16499 0 3.25004V9.75004C0.00086009 10.4681 0.286478 11.1564 0.794202 11.6642C1.30193 12.1719 1.9903 12.4575 2.70833 12.4584H10.2917C11.0097 12.4575 11.6981 12.1719 12.2058 11.6642C12.7135 11.1564 12.9991 10.4681 13 9.75004V3.25004C13 3.16499 12.9827 3.08754 12.9751 3.00195Z"
+                fill="white"></path>
+              <path
+                d="M7.64943 6.79559L12.597 1.84746C12.3573 1.45005 12.0193 1.12111 11.6155 0.892358C11.2117 0.663608 10.7558 0.542772 10.2917 0.541504H2.70835C2.24426 0.542772 1.78833 0.663608 1.38453 0.892358C0.980731 1.12111 0.642691 1.45005 0.403015 1.84746L5.3506 6.79559C5.65587 7.09963 6.06916 7.27034 6.50001 7.27034C6.93086 7.27034 7.34416 7.09963 7.64943 6.79559Z"
+                fill="white"></path>
+            </g>
+            <defs>
+              <clipPath id="clip0_1_47">
+                <rect width="13" height="13" fill="white"></rect>
+              </clipPath>
+            </defs>
+          </svg>{topbar.message.email}
+        </a>
+        {
+          topbar.social.map((item: any) => (
+            <a href={item.link} aria-label={item.icontext}>
+              <Image
+                src={item.image}
+                class="w-4 h-4"
+                alt=""
+                height={16}
+                width={16}
+              />
+            </a>
+          ))
+        }
       </div>
       <div
         class="lg:flex lg:rounded-b-3xl rounded-b-[30px] lg:flex-row hidden flex-col lg:static absolute top-0 left-0 lg:right-0 l lg:bg-transparent bg-primary w-full justify-end items-center lg:pb-0 pb-4 text-white text-sm gap-8 lg:pt-6 pt-40"
         id="menu-items"
       >
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Services</a>
-        <a href="">Gallery</a>
-        <a href="">Blog</a>
+        {
+          header.navItems.map((item: any) => (
+            <a href={item.link}>{item.label}</a>
+          ))
+        }
         <div class="flex justify-center items-center gap-4">
           <a
-            href=""
+            href={header.button[0].buttonSlug}
             class="rounded-full px-4 py-2 gap-3 text-sm whitespace-nowrap bg-transparent border border-white flex text-white justify-center items-center w-fit"
           >
             <svg
@@ -60,12 +138,12 @@
                 </clipPath>
               </defs>
             </svg>
-            1 (435) 655-9076
+            {header.button[0].buttontext}
           </a>
           <a
-            href={"/"}
-            class="rounded-full px-4  bg-primary whitespace-nowrap gap-3 text-sm text-[#333] py-2 border border-primary flex justify-center items-center w-fit"
-            >Contact Us <svg
+            href={header.button[1].buttonSlug}
+            class="rounded-full px-4 bg-primary whitespace-nowrap gap-3 text-sm text-[#333] py-2 border border-primary flex justify-center items-center w-fit"
+            >{header.button[1].buttontext}<svg
               xmlns="http://www.w3.org/2000/svg"
               width="19"
               height="19"
@@ -113,6 +191,5 @@
   bars?.addEventListener("click", () => {
     menu_items?.classList.toggle("hidden");
     menu_items?.classList.toggle("flex");
-
   });
 </script>

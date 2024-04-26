@@ -7,6 +7,7 @@ import TwoCol from "../components/TwoCol.astro";
 import WhatToExpect from "../components/WhatToExpect";
 import { createReader } from "@keystatic/core/reader";
 import keystaticConfig from "../../keystatic.config";
+import Image from "astro/components/Image.astro";
 import Layout from "../layouts/Layout.astro";
 import { getBlockValueByDiscriminant } from "../utils/getBlockValue";
 import WhatWeOffer from "../components/WhatWeOffer.astro";
@@ -41,8 +42,14 @@ const seodata = homePage?.seoData;
   description={seodata?.seoDesription}
   image={seodata?.ogImage}
 >
-  <div class="bg-hero-gradient relative">
-    <div class="hero-bg"></div>
+  <div class="z-50 bg-hero-gradient relative rounded-b-[60px] overflow-hidden">
+    <Image
+      src={heroData.bgImage}
+      width={1920}
+      height={880}
+      alt="HOme Hero"
+      class="w-full h-full object-cover absolute top-0 bottom-0 left-0 right-0"
+    />
     <Header />
     <Hero {...heroData} />
   </div>

@@ -34,6 +34,27 @@ OpeningHours:
   Button:
     label: Get FREE Estimate
     url: '#'
+locations:
+  title: Moorhouse Painting Locations
+  location:
+    - label: Perth
+      link: '#'
+    - label: Duncraig
+      link: '#'
+    - label: Hillary
+      link: '#'
+    - label: Marmion
+      link: '#'
+    - label: Karrinyup
+      link: '#'
+    - label: Kingsley
+      link: '#'
+    - label: Woodvale
+      link: '#'
+    - label: Mindarie
+      link: '#'
+    - label: Floreat
+      link: '#'
 otherlinks:
   - label: Privacy Policy
     link: '#'

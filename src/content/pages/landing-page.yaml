@@ -5,6 +5,7 @@ blocks:
     value:
       title: Commercial & Industrial <span class="text-secondary">Painting</span>
       subtitle: Professional Painting Contractor with Roots in Park City, Utah.
+      bgImage: /images/landing-page/blocks/0/value/bgImage.webp
       bannerTitle: Call us to get a FREE Estimate!
       reviewDescription: Premier Services Tailored to Meet Your Needs!
       firstButton:
@@ -34,24 +35,21 @@ blocks:
     value:
       pretitle: What We Offer
       heading: We Tailor Our Services To Suit Your Needs.
+      bgImage: /images/landing-page/blocks/2/value/bgImage.png
       whatweoffer:
-        - Cardicon: /images/landing-page/blocks/2/value/WhatWeOffer/0/Cardicon.svg
-          cardText: Residential Home Painting Services
+        - cardText: Residential Home Painting Services
           cardDescription: >-
             Our team of house painters have experience painting and staining all
             exterior surfaces.
-        - Cardicon: /images/landing-page/blocks/2/value/WhatWeOffer/1/Cardicon.svg
-          cardText: Exterior Painting Services
+        - cardText: Exterior Painting Services
           cardDescription: >-
             Our team of house painters have experience painting and staining all
             exterior surfaces.
-        - Cardicon: /images/landing-page/blocks/2/value/WhatWeOffer/2/Cardicon.svg
-          cardText: Exterior Staining Services
+        - cardText: Exterior Staining Services
           cardDescription: >-
             Our team of house painters have experience painting and staining all
             exterior surfaces.
-        - Cardicon: /images/landing-page/blocks/2/value/WhatWeOffer/3/Cardicon.svg
-          cardText: Commercial Painting Services
+        - cardText: Commercial Painting Services
           cardDescription: >-
             Our team of house painters have experience painting and staining all
             exterior surfaces.
