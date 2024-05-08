@@ -6,7 +6,7 @@ blocks:
   - discriminant: Hero
     value:
       title: Commercial & Industrial <span class="text-secondary">Painting</span>
-      subtitle: Professional Painting Contractor with Roots in Park City, Utah.
+      subtitle: 'Professional Painting Contractor '
       bgImage: /images/landing-page/blocks/0/value/bgImage.webp
       bannerTitle: Call us to get a FREE Estimate!
       reviewDescription: Premier Services Tailored to Meet Your Needs!
@@ -96,7 +96,7 @@ blocks:
             its difficult. Open, truthful conversations create opportunities for
             better analysis and future decisions.
         - Cardicon: /images/landing-page/blocks/3/value/WhatToExpect/5/Cardicon.svg
-          cardText: Over 20+ Years Experience
+          cardText: Responsibility and Accountability
           cardDescription: >-
             Our 20+ years experience in the painting, has shown us nearly every
             possible situation. Moorhouse handles your paint job in the most
